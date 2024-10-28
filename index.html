@@ -9,32 +9,55 @@
   </head>
 
   <body>
-    <h3 class="title">
-        My exciting to-do list!
-    </h3>
+    <h3 class="title"> Welcome to Your Task Manager!</h3>
+
     <div class="description">
-        <p>Welcome! This to-do list helps you keep track of tasks easily.</p>
-        <p><strong>Instructions:</strong></p>
+        <p>This app helps you organize and track your tasks with ease.
+        </p>
+        <p> <strong>Here’s how it works:</strong></p>
         <ul>
-            <li>To add a task, click **Add Task** and fill in the details.</li>
-            <li>Drag your task under "Done tasks" once you finished your task.</li>
-            <li>Click **Delete** if you want to delete a task.</li>
+            <li>Add Tasks: Click Add Task and fill in the details.</li>
+            <li>Reorder & Move Tasks: Drag and drop tasks within and between columns.</li>
+            <li>Edit and Delete: Click Edit to change details, or Delete to remove a task.</li>
+            <li>Auto-Save: Tasks are saved in Local Storage with their status and order, keeping your setup consistent across sessions.</li>
         </ul>
     </div>
     <main>
         <div class="container">
-            <div id="undone-tasks" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <h2>Undone Tasks</h2>
+            <div id="todo-tasks" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>To do</h2>
                 <ul></ul>
             </div>
         
-            <div id="done-tasks" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <h2>Done Tasks</h2>
+            <div id="inprogress-tasks" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>In progress</h2>
                 <ul></ul>
             </div>
+
+            <div id="done-tasks" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Done</h2>
+                <ul></ul>
+            </div>
+
         </div>
         
         <button id="myButton">Add Task</button>
+        <div class="task-form-container" id="taskFormContainer" style="display: none;">
+            <h3>Create a New Task</h3>
+            <form id="taskForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                
+                <label for="description">Description:</label>
+                <input type="text" id="description">
+                
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate" required>
+                
+                <button type="submit">Save Task</button>
+                <button type="button" onclick="toggleForm()">Cancel</button>
+            </form>
+        </div>
   </body>
 
 </html>
