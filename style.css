@@ -13,7 +13,7 @@ body {
     text-align: center;
 }
 
-strong {
+strong{
     font-size: 20px;
 }
 
@@ -22,17 +22,30 @@ strong {
     color: #444;
     line-height: 1.8;
     max-width: 600px;
-    margin: 30px auto;
-    padding: 0 20px;
+    margin: 20px auto;
     text-align: center;
 }
 
+.description p {
+    font-weight: bold;
+    
+    margin-bottom: 10px;
+}
+
 .description ul {
-    padding-left: 20px;
-    list-style-type: circle;
-    color: #333;
+    padding-left: 50px;
+    list-style-type: disc;
+    color: #555;
     text-align: left;
-    display: inline-block; 
+}
+
+.description li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.description ul li::marker {
+    color: #2a3d7d;
 }
 
 li h3 {
@@ -82,6 +95,7 @@ li p {
 
 button {
     margin-bottom: 15px;
+    margin: 15px;
     padding: 8px 12px;
     background-color: #2a3d7d;
     color: #fff;
@@ -92,4 +106,52 @@ button {
 
 button:hover {
     background-color: #1f2d5a;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .task-column {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+.task-form-container {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.task-form-container label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.task-form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-form-container button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#myButton {
+    display: block;
+    margin: 20px auto;
 }
