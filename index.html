@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>todo list</title>
+    <script type="text/javascript" src="main.js" defer></script>
+    <link href="style.css"rel="stylesheet">
+  </head>
+
+  <body>
+    <h3 class="title">
+        My exciting to-do list!
+    </h3>
+    <div class="description">
+        <p>Welcome! This to-do list helps you keep track of tasks easily.</p>
+        <p><strong>Instructions:</strong></p>
+        <ul>
+            <li>To add a task, click **Add Task** and fill in the details.</li>
+            <li>Drag your task under "Done tasks" once you finished your task.</li>
+            <li>Click **Delete** if you want to delete a task.</li>
+        </ul>
+    </div>
+    <main>
+        <div class="container">
+            <div id="undone-tasks" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Undone Tasks</h2>
+                <ul></ul>
+            </div>
+        
+            <div id="done-tasks" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Done Tasks</h2>
+                <ul></ul>
+            </div>
+        </div>
+        
+        <button id="myButton">Add Task</button>
+  </body>
+
+</html>
